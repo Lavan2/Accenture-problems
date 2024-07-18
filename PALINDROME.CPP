@@ -19,7 +19,7 @@ int main(){
 }
 
 /*OUTPUT:
-77
+77 //INPUT
 77 is Palindrome
 34
 34 is Not a Palindrome*/
