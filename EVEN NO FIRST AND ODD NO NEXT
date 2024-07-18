@@ -1,0 +1,54 @@
+#include<iostream>
+using namespace std;
+int main(){
+	int n,i;
+	int evencount=0, oddcount=0;
+	int evenarr[n],oddarr[n];
+	cin>>n;
+	int arr[n];
+	for(i=0;i<n;i++){
+		cin>>arr[i];
+	}
+	for(i=0;i<n;i++){
+		cout<<arr[i]<<" ";
+	}
+	cout<<endl;
+	
+	for(i=0;i<n;i++)
+	{
+		if(arr[i]%2==0){
+			evenarr[evencount++]= arr[i];
+		}
+		else{
+			oddarr[oddcount++]= arr[i];
+		}
+	}
+	for(i=0;i<evencount;i++){
+		cout<<evenarr[i]<<" ";
+	}
+	cout<<endl;
+	for(i=0;i<oddcount;i++){
+		cout<<oddarr[i]<<" ";
+	}
+	cout<<endl;
+	int mergearr[n];
+	for(i=0;i<evencount;i++){
+		mergearr[i] = evenarr[i];
+	}
+	for(i=0;i<oddcount;i++){
+		mergearr[i+evencount] = oddarr[i];
+	}
+	for(i=0;i<n;i++){
+		cout<<mergearr[i]<<" ";
+	}
+	cout<<endl;
+	return 0;
+}
+
+OUTPUT:
+7 //INPUT SIZE
+2 3 5 9 26 37 48 //INPUT
+2 3 5 9 26 37 48
+2 26 48 //EVEN
+3 5 9 37 //ODD
+2 26 48 3 5 9 37 //EVEN NO FIRST AND ODD NEXT WITH MERGE ARRAY
