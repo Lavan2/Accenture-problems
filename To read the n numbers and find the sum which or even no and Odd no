@@ -1,0 +1,34 @@
+#include<iostream>
+using namespace std;
+int main(){
+	int n;
+	cin>>n;
+	int sumeven= 0,sumodd=0;
+	for(int i=1;i<=n;i++){
+		int no;
+		cin>>no;
+		if(no%2==0){
+			sumeven += no;
+		}
+		else{
+			sumodd += no;
+		}
+	}
+	cout<<"The even numbers is: "<<sumeven<<endl;
+	cout<<"The odd numbers is: "<<sumodd<<endl;
+}
+
+//OUTPUT:
+10 //INPUT SIZE
+2
+3
+4
+5
+6
+7
+8
+9
+10
+12
+The even numbers is: 42 //ALL EVEN NO ARE ADDED AND STORED
+The odd numbers is: 24  //ALL ODD NO ARE ADDED AND STORED
